@@ -26,12 +26,12 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-wrap items-center gap-4">
-          <button className="bg-[#0F2A44] md:text-2xl text-white py-2 px-4 rounded">
+          <button className="bg-[#0F2A44] md:text-xl text-white py-2 px-3 rounded">
             Explore Properties
           </button>
 
-          <button className="flex items-center md:text-2xl gap-2 bg-[#7e8c9a] text-white py-2 px-4 rounded">
-            <span className="border-2 md:text-lg md:border-4 md:p-2 rounded-full p-1 border-white">
+          <button className="flex items-center md:text-xl gap-2 bg-[#7e8c9a] text-white py-2 px-4 rounded">
+            <span className="border-2 rounded-full p-1 border-white">
               <FaPlay />
             </span>
             Watch Videos
