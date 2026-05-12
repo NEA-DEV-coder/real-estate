@@ -4,6 +4,8 @@ import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
 import Header from "./components/Header";
+import HeroSection from "./components/HeroSection";
+import Info from "./components/Info";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,6 +13,8 @@ function App() {
   return (
     <>
       <Header />
+      <HeroSection />
+      <Info />
     </>
   );
 }

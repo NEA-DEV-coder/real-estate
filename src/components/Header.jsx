@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaPhone, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 
 const Header = () => {
@@ -39,7 +39,12 @@ const Header = () => {
           </ul>
         </nav>
         <div className="hidden lg:flex items-center font-heading gap-4">
-          <h4 className="text-[#0F2A44]">9106782361</h4>
+          <h4 className="flex items-center gap-2 text-[#0F2A44]">
+            <span className="rotate-90">
+              <FaPhone />
+            </span>{" "}
+            +1(910) 6782 361
+          </h4>
           <button
             className="bg-[#0F2A44] text-white py-2 px-4
            rounded hover:bg-[#1C3D5A]"
