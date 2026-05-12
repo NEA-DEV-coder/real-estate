@@ -7,7 +7,7 @@ const Info = () => {
       <div>
         <h2 className="text-4xl my-10 font-bold text-[#0a2e4f]">You Can...</h2>
       </div>
-      <div className="xl:flex xl:items-center gap-10 md:grid-cols-2 grid">
+      <div className="lg:flex lg:items-center gap-10 md:grid-cols-2 grid">
         <div className="flex items-center gap-4">
           <FaHome className="text-4xl " />
           <p className="font-semibold text-gray-500 md:text-lg xl:text-base">
