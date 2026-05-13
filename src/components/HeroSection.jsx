@@ -30,8 +30,11 @@ const HeroSection = () => {
             Explore Properties
           </button>
 
-          <button className="flex items-center md:text-xl gap-2 bg-[#7e8c9a] text-white py-2 px-4 rounded">
-            <span className="border-2 rounded-full p-1 border-white">
+          <button
+            className="flex items-center md:text-xl gap-2 bg-[#7e8c9a]
+           text-white py-2 px-4 rounded"
+          >
+            <span className="border-2 rounded-full py-1 px-1 text-sm border-white">
               <FaPlay />
             </span>
             Watch Videos

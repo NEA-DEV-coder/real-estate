@@ -3,7 +3,7 @@ import { FaPeopleGroup } from "react-icons/fa6";
 
 const Info = () => {
   return (
-    <section className="my-20 mx-6 md:mx-10">
+    <section className="my-20 mx-6 md:mx-10 font-heading">
       <div>
         <h2 className="text-4xl my-10 font-bold text-[#0a2e4f]">You Can...</h2>
       </div>
