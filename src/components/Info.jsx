@@ -5,15 +5,15 @@ const Info = () => {
   return (
     <section className="my-20 mx-6 md:mx-10 font-heading">
       <div>
-        <h2 className="text-4xl my-10 font-bold text-[#0a2e4f]">You Can...</h2>
+        <h2 className="text-2xl my-10 font-bold text-[#0a2e4f]">You Can...</h2>
       </div>
       <div className="lg:flex lg:items-center gap-10 md:grid-cols-2 grid">
         <div className="flex items-center gap-4">
           <FaHome className="text-4xl " />
-          <p className="font-semibold text-gray-500 md:text-lg xl:text-base">
+          <p className="font-semibold text-gray-500 md:text-sm xl:text-sm">
             <span
               className="flex items-center gap-2 text-[#154878]
-              font-bold text-lg md:text-xl"
+              font-bold text-lg md:text-base"
             >
               Buy With Confidence
             </span>
@@ -23,10 +23,10 @@ const Info = () => {
 
         <div className="flex items-center gap-4">
           <FaTag className="rotate-90 text-4xl shadow-2xl" />
-          <p className="font-semibold text-gray-500 md:text-lg">
+          <p className="font-semibold text-gray-500 md:text-sm xl:text-sm">
             <span
               className="flex items-center text-[#154878]
-             font-bold text-lg gap-2 md:text-xl"
+             font-bold text-lg gap-2 md:text-base"
             >
               Sell For More
             </span>
@@ -36,10 +36,10 @@ const Info = () => {
 
         <div className="flex items-center gap-4">
           <FaKey className="text-4xl" />
-          <p className="font-semibold text-gray-500 md:text-lg xl:text-base">
+          <p className="font-semibold text-gray-500 md:text-sm xl:text-sm">
             <span
               className="flex items-center text-[#154878]
-            font-bold text-lg gap-2 md:text-xl"
+            font-bold text-lg gap-2 md:text-base"
             >
               Rent With Ease
             </span>
@@ -48,10 +48,10 @@ const Info = () => {
         </div>
         <div className="flex items-center gap-4">
           <FaPeopleGroup className="text-4xl" />
-          <p className="font-semibold text-gray-500 md:text-lg xl:text-base">
+          <p className="font-semibold text-gray-500 md:text-sm xl:text-sm">
             <span
               className="flex items-center text-[#154878] font-bold
-             md:text-xl text-lg gap-2"
+             md:text-base text-lg gap-2"
             >
               Local Experts
             </span>

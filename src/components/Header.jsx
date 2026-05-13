@@ -46,7 +46,7 @@ const Header = () => {
             +1(910) 6782 361
           </h4>
           <button
-            className="bg-[#0F2A44] text-white py-2 px-4
+            className="bg-[#0F2A44] text-white py-1 px-2 md:text-sm
            rounded hover:bg-[#1C3D5A]"
           >
             Schedule a consultation

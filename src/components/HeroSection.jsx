@@ -16,25 +16,25 @@ const HeroSection = () => {
 
       {/* content */}
       <div className="relative z-20 mx-6 md:mx-10 py-14 space-y-10">
-        <h1 className="text-3xl md:text-5xl lg:text-5xl text-white font-bold">
+        <h1 className="text-3xl md:text-5xl lg:text-4xl text-white font-bold">
           Find your perfect <br /> place to call home
         </h1>
 
-        <p className="font-semibold md:text-3xl text-white lg:text-lg">
+        <p className="font-semibold md:text-3xl text-white lg:text-base">
           Discover Exceptional Properties, homes that <br />
           fit your lifestyle and your future.
         </p>
 
         <div className="flex flex-wrap items-center gap-4">
-          <button className="bg-[#0F2A44] md:text-xl text-white py-2 px-3 rounded">
+          <button className="bg-[#0F2A44] md:text-sm text-white py-2 px-3 rounded">
             Explore Properties
           </button>
 
           <button
-            className="flex items-center md:text-xl gap-2 bg-[#7e8c9a]
+            className="flex items-center md:text-sm gap-2 bg-[#7e8c9a]
            text-white py-2 px-4 rounded"
           >
-            <span className="border-2 rounded-full py-1 px-1 text-sm border-white">
+            <span className="border-2 rounded-full py-1 px-1 text-[0.6rem] border-white">
               <FaPlay />
             </span>
             Watch Videos
@@ -46,7 +46,7 @@ const HeroSection = () => {
           {/* Tabs */}
           <div
             className="flex gap-4 relative z-20 w-80 mt-20 lg:mt-20
-           px-4 py-3 bg-white rounded-t-md lg:w-96 md:w-96 md:text-2xl"
+           px-4 py-3 bg-white rounded-t-md lg:w-96 md:w-96 md:text-lg"
           >
             <button
               onClick={() =>
@@ -88,7 +88,7 @@ const HeroSection = () => {
             </button>
           </div>
           {!selectedOption && (
-            <p className="bg-white md:text-xl font-bold p-2 w-80 md:w-96">
+            <p className="bg-white md:text-lg font-bold p-2 w-80 md:w-96">
               Select any of the option you want
             </p>
           )}
