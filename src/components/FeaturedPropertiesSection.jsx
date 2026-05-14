@@ -26,54 +26,59 @@ const FeaturedPropertiesSection = () => {
           </span>
         </button>
       </div>
-      <div className="grid lg:grid-cols-4 xl:grid-cols-4 font-heading gap-3 overflow-x-hidden">
-        {featuredProperties.map((property) => (
-          <div
-            key={property.id}
-            className="border-2 w-[17.5rem] rounded-lg overflow-hidden
+      <div className="mx-auto">
+        <div
+          className="grid md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 font-heading
+       gap-y-10 overflow-x-hidden"
+        >
+          {featuredProperties.map((property) => (
+            <div
+              key={property.id}
+              className="border-2 w-[17.5rem] mx-auto rounded-lg overflow-hidden
     shadow-xl transition duration-300 hover:shadow-2xl"
-          >
-            <div className="relative">
-              <img src={property.image} alt="house" className="w-[17.5rem]" />
-              <span className="absolute text-sm top-2 mx-4 bg-[#154878] text-white py-0 px-2 rounded">
-                {property.option}
-              </span>
-              <span className="absolute text-[0.5rem] top-2 right-2 bg-[#154878] text-[#fefeff] p-2 rounded-full shadow-md">
-                <FaHeart />
-              </span>
-            </div>
-            <div className="mx-2 mb-3">
-              <div className="flex items-center lg:text-sm justify-between mt-4 mb-10 gap-1">
-                <h4 className="font-body font-semibold">
-                  {property.houseLocation}
-                </h4>
-                <p className="text-[#154878] lg:text-sm font-bold">
-                  {property.price}
-                </p>
+            >
+              <div className="relative">
+                <img src={property.image} alt="house" className="w-[17.5rem]" />
+                <span className="absolute text-sm top-2 mx-4 bg-[#154878] text-white py-0 px-2 rounded">
+                  {property.option}
+                </span>
+                <span className="absolute text-[0.5rem] top-2 right-2 bg-[#154878] text-[#fefeff] p-2 rounded-full shadow-md">
+                  <FaHeart />
+                </span>
               </div>
-              <div className="flex items-center font-body justify-between gap-4">
-                <p className="flex items-center lg:text-sm gap-1">
-                  <span>
-                    <FaBed />
-                  </span>
-                  {property.beds} Beds
-                </p>
-                <p className="flex items-center lg:text-sm gap-1">
-                  <span>
-                    <FaBath />
-                  </span>
-                  {property.bathrooms} Baths
-                </p>
-                <p className="flex items-center lg:text-sm gap-1">
-                  <span>
-                    <FaRulerCombined />
-                  </span>
-                  {property.squareMeters}
-                </p>
+              <div className="mx-2 mb-3">
+                <div className="flex items-center lg:text-sm justify-between mt-4 mb-10 gap-1">
+                  <h4 className="font-body font-semibold">
+                    {property.houseLocation}
+                  </h4>
+                  <p className="text-[#154878] lg:text-sm font-bold">
+                    {property.price}
+                  </p>
+                </div>
+                <div className="flex items-center font-body justify-between gap-4">
+                  <p className="flex items-center lg:text-sm gap-1">
+                    <span>
+                      <FaBed />
+                    </span>
+                    {property.beds} Beds
+                  </p>
+                  <p className="flex items-center lg:text-sm gap-1">
+                    <span>
+                      <FaBath />
+                    </span>
+                    {property.bathrooms} Baths
+                  </p>
+                  <p className="flex items-center lg:text-sm gap-1">
+                    <span>
+                      <FaRulerCombined />
+                    </span>
+                    {property.squareMeters}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

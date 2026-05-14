@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import Info from "./components/Info";
 import FeaturedPropertiesSection from "./components/FeaturedPropertiesSection";
+import AboutSection from "./components/AboutSection";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
       <HeroSection />
       <Info />
       <FeaturedPropertiesSection />
+      <AboutSection />
     </>
   );
 }
