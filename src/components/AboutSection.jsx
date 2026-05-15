@@ -74,7 +74,7 @@ const AboutSection = () => {
         </p>
         <p className="flex items-center flex-col gap-2 font-semibold font-body">
           <FaHandHoldingHeart className="text-2xl md:text-4xl text-[#0a2e4f]" />
-          99%
+          95%
           <span className="text-sm md:text-base"> Customer Satisfaction</span>
         </p>
         <p className="flex items-center flex-col gap-2 font-semibold font-body">
