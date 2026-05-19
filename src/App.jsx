@@ -8,6 +8,8 @@ import AboutSection from "./components/AboutSection";
 import BuySection from "./components/BuySection";
 import SellSection from "./components/SellSection";
 import RentalSection from "./components/RentalSection";
+import Contact from "./components/Contact";
+import Schedule from "./components/Schedule";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,6 +24,8 @@ function App() {
       <BuySection />
       <SellSection />
       <RentalSection />
+      <Contact />
+      <Schedule />
     </>
   );
 }
