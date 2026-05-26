@@ -14,7 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/property/:id" element={<PropertyClickedSection />} />
 
-          <Route path="/properties" element={<AllProperties />} />
+          <Route path="/properties/:id" element={<AllProperties />} />
         </Route>
       </Routes>
     </BrowserRouter>
