@@ -19,7 +19,7 @@ const FeaturedPropertiesSection = () => {
           Featured Properties
         </h2>
         <button
-          onClick={() => navigate(`/properties/${Properties.id}`)}
+          onClick={() => navigate(`/properties`)}
           className="text-[#154878] flex items-center gap-2 font-bold py-2 
          rounded underline transition duration-300"
         >
