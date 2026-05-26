@@ -8,15 +8,18 @@ import {
 } from "react-icons/fa";
 import sampleImg from "../assets/images/estate-bg.png";
 import { featuredProperties } from "../../project data/data";
+import { useNavigate } from "react-router-dom";
 
 const FeaturedPropertiesSection = () => {
+  const navigate = useNavigate();
   return (
-    <section className="mx-6 lg:mx-8 my-20">
+    <section id="properties" className="mx-6 lg:mx-8 my-20">
       <div className="lg:flex lg:justify-between items-center my-10 grid">
         <h2 className="text-2xl lg:text-2xl text-[#154878] font-bold mb-0 lg:mb-0">
           Featured Properties
         </h2>
         <button
+          onClick={() => navigate("/properties")}
           className="text-[#154878] flex items-center gap-2 font-bold py-2 
          rounded underline transition duration-300"
         >

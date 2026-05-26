@@ -4,7 +4,7 @@ import { FaLocationPin } from "react-icons/fa6";
 
 const Contact = () => {
   return (
-    <section className="my-20 mx-6 md:mx-10">
+    <section id="contact" className="my-20 mx-6 md:mx-10">
       <div className="grid lg:flex items-center">
         <div className="flex-1">
           <h2 className="text-3xl mb-10 font-heading font-bold text-[#013465]">

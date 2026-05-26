@@ -17,7 +17,7 @@ import { BsFillBookmarkHeartFill } from "react-icons/bs";
 
 const AboutSection = () => {
   return (
-    <section className="my-20 mx-6 md:mx-10 font-heading">
+    <section id="about-us" className="my-20 mx-6 md:mx-10 font-heading">
       <div>
         <h3 className="text-3xl md:text-4xl font-bold text-center my-10 text-[#0a2e4f] underline underline-offset-8">
           About Us

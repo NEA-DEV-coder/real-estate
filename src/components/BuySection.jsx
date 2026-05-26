@@ -4,7 +4,7 @@ import buyImg from "../assets/images/Bedroom 1.jpg";
 
 const BuySection = () => {
   return (
-    <section className="my-20 mx-6 md:mx-10">
+    <section id="buy" className="my-20 mx-6 md:mx-10">
       <div className="grid lg:flex">
         <div className="flex-1">
           <h2 className="text-3xl mb-10 font-heading font-bold text-[#013465]">

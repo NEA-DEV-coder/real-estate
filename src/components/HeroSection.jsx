@@ -8,6 +8,7 @@ const HeroSection = () => {
 
   return (
     <div
+      id="home"
       className="min-h-screen font-heading font-light w-full bg-cover bg-center bg-no-repeat relative"
       style={{ backgroundImage: `url(${heroBg})` }}
     >
@@ -26,13 +27,13 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-wrap items-center gap-4">
-          <button className="bg-[#0F2A44] md:text-sm text-white py-2 px-3 rounded">
+          <button className="bg-[#0F2A44] hover:bg-[#1774cc] md:text-sm text-white py-2 px-3 rounded">
             Explore Properties
           </button>
 
           <button
-            className="flex items-center md:text-sm gap-2 bg-[#7e8c9a]
-           text-white py-2 px-4 rounded"
+            className="flex items-center md:text-sm gap-2 border-2
+           text-white py-2 px-4 rounded hover:bg-[#415d73]"
           >
             <span className="border-2 rounded-full py-1 px-1 text-[0.6rem] border-white">
               <FaPlay />

@@ -1,32 +1,23 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
-import Info from "./components/Info";
-import FeaturedPropertiesSection from "./components/FeaturedPropertiesSection";
-import AboutSection from "./components/AboutSection";
-import BuySection from "./components/BuySection";
-import SellSection from "./components/SellSection";
-import RentalSection from "./components/RentalSection";
-import Contact from "./components/Contact";
-import Schedule from "./components/Schedule";
+
+import PropertyClickedSection from "./components/PropertyClickedSection";
+import Home from "./components/homepage/Home";
+import Layout from "./components/Layout";
+import AllProperties from "./components/AllProperties";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <Header />
-      <HeroSection />
-      <Info />
-      <FeaturedPropertiesSection />
-      <AboutSection />
-      <BuySection />
-      <SellSection />
-      <RentalSection />
-      <Contact />
-      <Schedule />
-    </>
+    <BrowserRouter basename="/real-estate">
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/property/:id" element={<PropertyClickedSection />} />
+
+          <Route path="/properties" element={<AllProperties />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

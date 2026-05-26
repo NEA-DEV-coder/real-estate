@@ -5,7 +5,7 @@ import { FaEnvelopeCircleCheck } from "react-icons/fa6";
 
 const RentalSection = () => {
   return (
-    <section className="my-20 mx-6 md:mx-10">
+    <section id="rent" className="my-20 mx-6 md:mx-10">
       <div className="grid lg:flex">
         <div className="flex-1">
           <h2 className="text-3xl mb-10 font-heading font-bold text-[#013465]">
