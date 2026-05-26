@@ -27,7 +27,7 @@ const AllProperties = () => {
         {allProperties.map((property) => (
           <div
             onClick={() => {
-              navigate(`/properties/${properties.id}`);
+              navigate(`/property/${property.id}`);
             }}
             key={property.id}
             className="border-2 w-[18.5rem] mx-auto rounded-lg overflow-hidden
