@@ -26,7 +26,9 @@ const AllProperties = () => {
       >
         {allProperties.map((property) => (
           <div
-            onClick={() => navigate(`/properties/${properties.id}`)}
+            onClick={() => {
+              navigate(`/properties/${properties.id}`);
+            }}
             key={property.id}
             className="border-2 w-[18.5rem] mx-auto rounded-lg overflow-hidden
                    shadow-xl transition duration-300 hover:shadow-2xl"
