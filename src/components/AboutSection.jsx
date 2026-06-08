@@ -1,5 +1,6 @@
 import { TbCertificate } from "react-icons/tb";
 import aboutImg from "../assets/images/real-about.png";
+import { motion } from "framer-motion";
 import {
   FaHandHoldingHeart,
   FaHouseDamage,
@@ -14,8 +15,21 @@ import {
   FaUserGroup,
 } from "react-icons/fa6";
 import { BsFillBookmarkHeartFill } from "react-icons/bs";
+import { useEffect, useState } from "react";
 
 const AboutSection = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount((prev) => {
+        if (prev < 500) return prev + 5;
+        clearInterval(interval);
+        return 500;
+      });
+    }, 20);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section id="about-us" className="my-20 mx-6 md:mx-10 font-heading">
       <div>
@@ -29,7 +43,10 @@ const AboutSection = () => {
             About Neadev Real Estate
           </h2>
 
-          <div
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5 }}
             className="space-y-5 text-gray-500 shadow-xl py-5 px-5 border-2 rounded-lg md:w-full
              lg:w-[95%] mx-auto w-[95%] md:text-lg xl:text-base leading-7"
           >
@@ -48,15 +65,20 @@ const AboutSection = () => {
             <p className="text-black font-bold">
               Let us help you turn your real estate dreams into reality.
             </p>
-          </div>
+          </motion.div>
         </div>
-        <div className="flex-1">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5 }}
+          className="flex-1"
+        >
           <img
             src={aboutImg}
             alt="About Neadev Real Estate"
             className="w-full md:max-w-full max-w-md rounded-lg shadow-lg"
           />
-        </div>
+        </motion.div>
       </div>
       <div
         className="flex items-center md:text-2xl gap-10 my-10 border-2 border-gray-200
@@ -69,8 +91,7 @@ const AboutSection = () => {
         </p>
         <p className="flex items-center flex-col gap-2 font-semibold font-body">
           <FaHouseDamage className="text-2xl md:text-4xl  text-[#0a2e4f]" />
-          500+
-          <span className="text-sm md:text-base"> Homes Sold</span>
+          {count}+<span className="text-sm md:text-base"> Homes Sold</span>
         </p>
         <p className="flex items-center flex-col gap-2 font-semibold font-body">
           <FaHandHoldingHeart className="text-2xl md:text-4xl text-[#0a2e4f]" />

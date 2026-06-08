@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaArrowRight,
   FaBath,
@@ -6,12 +6,12 @@ import {
   FaHeart,
   FaRulerCombined,
 } from "react-icons/fa";
-import sampleImg from "../assets/images/estate-bg.png";
 import { featuredProperties } from "../../project data/data";
 import { useNavigate } from "react-router-dom";
 
 const FeaturedPropertiesSection = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   return (
     <section id="properties" className="mx-6 lg:mx-8 my-20">
       <div className="lg:flex lg:justify-between items-center my-10 grid">
@@ -19,14 +19,29 @@ const FeaturedPropertiesSection = () => {
           Featured Properties
         </h2>
         <button
-          onClick={() => navigate(`/properties`)}
+          onClick={() => {
+            setLoading(true);
+            setTimeout(() => {
+              navigate(`/properties`);
+            }, 2000);
+          }}
+          disabled={loading}
           className="text-[#154878] flex items-center gap-2 font-bold py-2 
          rounded underline transition duration-300"
         >
-          View All Properties{" "}
-          <span>
-            <FaArrowRight />
-          </span>
+          {loading ? (
+            <div
+              className="w-3 h-3 border-2 animate-spin border-t-transparent rounded-full
+          border-[#154878]"
+            ></div>
+          ) : (
+            <>
+              View All Properties{" "}
+              <span>
+                <FaArrowRight />
+              </span>
+            </>
+          )}
         </button>
       </div>
       <div className="mx-auto">
@@ -37,7 +52,8 @@ const FeaturedPropertiesSection = () => {
           {featuredProperties.map((property) => (
             <div
               key={property.id}
-              className="border-2 w-[17.5rem] mx-auto rounded-lg overflow-hidden
+              onClick={() => navigate(`/property/${property.id}`)}
+              className="border-2 w-[17.5rem] mx-auto rounded-lg overflow-hidden cursor-pointer
     shadow-xl transition duration-300 hover:shadow-2xl"
             >
               <div className="relative">

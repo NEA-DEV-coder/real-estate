@@ -48,12 +48,13 @@ const BuySection = () => {
                   </span>
                 </p>
               </div>
-              <button
+              <a
+                href="#properties"
                 className="bg-[#0a2e4f] font-body hover:bg-[#1774cc]
-        transition duration-300 font-bold w-56 py-1 px-2 text-white rounded-md my-4"
+        transition duration-300 font-bold w-56 py-1 px-2 text-white rounded-md my-4 text-center block"
               >
                 Start your Search
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -94,12 +95,13 @@ const BuySection = () => {
               </span>
             </p>
           </div>
-          <button
+          <a
+            href="#properties"
             className="bg-[#0a2e4f] font-body hover:bg-[#1774cc]
-        transition duration-300 font-bold w-56 py-1 px-2 text-white rounded-md my-4"
+        transition duration-300 font-bold w-56 py-1 px-2 text-white rounded-md my-4 text-center block"
           >
             Start your Search
-          </button>
+          </a>
         </div>
       </div>
     </section>

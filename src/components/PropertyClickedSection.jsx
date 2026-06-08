@@ -47,7 +47,7 @@ const PropertyClickedSection = () => {
   if (!property) {
     return (
       <section className="mx-6 md:mx-10">
-        <div className="container mx-auto px-4 py-8">
+        <div className="container  mx-auto px-4 py-8">
           <button
             onClick={() => navigate(-1)}
             className="mt-10 flex gap-2 items-center"
@@ -64,7 +64,7 @@ const PropertyClickedSection = () => {
 
   return (
     <section className="mx-6 md:mx-10">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container font-body mx-auto px-4 py-8">
         <button
           onClick={() => navigate(-1)}
           className="mt-10 flex gap-2 items-center"
@@ -147,9 +147,9 @@ const PropertyClickedSection = () => {
             </h2>
             <p>Want to this property?</p>
             <p>Let's schedule a time.</p>
-            <button className="gap-2 bg-[#0F2A44] rounded-sm my-5 w-full mx-auto text-white py-1 px-2 hover:bg-[#4594dd] transition duration-300">
+            <a href="#schedule" className="gap-2 bg-[#0F2A44] rounded-sm my-5 w-full mx-auto text-center text-white py-1 px-2 hover:bg-[#4594dd] transition duration-300 block">
               Schedule a Tour
-            </button>
+            </a>
             <p>
               or call <span className="text-[#4594dd]">08100655023</span>
             </p>

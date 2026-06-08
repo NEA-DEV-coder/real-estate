@@ -166,7 +166,9 @@ const Properties = () => {
               </div>
             </div>
             <div className="flex flex-col gap-2 my-10 lg:gap-2">
-              <label className="font-bold text-[#064987] mb-1">Beds</label>
+              <label className="font-bold font-body text-[#064987] mb-1">
+                Beds
+              </label>
               <select className="border rounded px-2 py-1">
                 <option>Any Price</option>
                 <option>500k</option>

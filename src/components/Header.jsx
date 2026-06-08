@@ -76,31 +76,31 @@ const Header = () => {
             </button>
             <ul className="flex flex-col gap-6 mt-5 font-heading">
               <li className="text-[#a6b5c2]">
-                <a href="#home">Home</a>
+                <a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a>
               </li>
 
               <li>
-                <a href="#properties">Properties</a>
+                <a href="#properties" onClick={() => setIsMenuOpen(false)}>Properties</a>
               </li>
 
               <li>
-                <a href="#buy">Buy</a>
+                <a href="#buy" onClick={() => setIsMenuOpen(false)}>Buy</a>
               </li>
 
               <li>
-                <a href="#sell">Sell</a>
+                <a href="#sell" onClick={() => setIsMenuOpen(false)}>Sell</a>
               </li>
 
               <li>
-                <a href="#rent">Rent</a>
+                <a href="#rent" onClick={() => setIsMenuOpen(false)}>Rent</a>
               </li>
 
               <li>
-                <a href="#about-us">About Us</a>
+                <a href="#about-us" onClick={() => setIsMenuOpen(false)}>About Us</a>
               </li>
 
               <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
               </li>
 
               <div className="flex flex-col gap-4 mt-6">
@@ -110,7 +110,7 @@ const Header = () => {
                   className="bg-[#0F2A44] text-white 
           py-2 px-4 rounded hover:bg-[#1C3D5A]"
                 >
-                  Schedule a consultation
+                  <a href="#schedule" onClick={() => setIsMenuOpen(false)}>Schedule a consultation</a>
                 </button>
               </div>
             </ul>

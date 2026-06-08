@@ -18,7 +18,9 @@ const AllProperties = () => {
         <button onClick={() => navigate(-1)} className="mt-20">
           <FaArrowLeft />
         </button>
-        <h2 className="my-5">Properties</h2>
+        <h2 className="my-5 font-heading uppercase leading-loose text-[#154878]">
+          Properties
+        </h2>
       </div>
       <div
         className="grid md:grid-cols-2 lg:grid-cols-3 font-heading
@@ -31,7 +33,7 @@ const AllProperties = () => {
             }}
             key={property.id}
             className="border-2 w-[18.5rem] mx-auto rounded-lg overflow-hidden
-                   shadow-xl transition duration-300 hover:shadow-2xl"
+                   shadow-xl transition font-heading duration-300 hover:shadow-2xl"
           >
             <div className="relative">
               <img src={property.image} alt="house" className="w-[18.5rem]" />

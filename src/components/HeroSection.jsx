@@ -1,6 +1,7 @@
 import { FaHome, FaPlay, FaSearch, FaTag } from "react-icons/fa";
 import heroBg from "../assets/images/estate-bg.png";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const [option, setOption] = useState("");
@@ -17,21 +18,32 @@ const HeroSection = () => {
 
       {/* content */}
       <div className="relative z-20 mx-6 md:mx-10 py-14 space-y-10">
-        <h1 className="text-3xl md:text-5xl lg:text-4xl text-white font-bold">
+        <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-3xl md:text-5xl lg:text-4xl text-white font-bold"
+        >
           Find your perfect <br /> place to call home
-        </h1>
+        </motion.h1>
 
-        <p className="font-semibold md:text-3xl text-white lg:text-base">
+        <motion.p
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.3 }}
+          className="font-semibold md:text-3xl text-white lg:text-base"
+        >
           Discover Exceptional Properties, homes that <br />
           fit your lifestyle and your future.
-        </p>
+        </motion.p>
 
         <div className="flex flex-wrap items-center gap-4">
-          <button className="bg-[#0F2A44] hover:bg-[#1774cc] md:text-sm text-white py-2 px-3 rounded">
+          <a href="#properties" className="bg-[#0F2A44] hover:bg-[#1774cc] md:text-sm text-white py-2 px-3 rounded">
             Explore Properties
-          </button>
+          </a>
 
-          <button
+          <a
+            href="#about-us"
             className="flex items-center md:text-sm gap-2 border-2
            text-white py-2 px-4 rounded hover:bg-[#415d73]"
           >
@@ -39,13 +51,16 @@ const HeroSection = () => {
               <FaPlay />
             </span>
             Watch Videos
-          </button>
+          </a>
         </div>
 
         {/* Tabs + Form */}
-        <div className="">
+        <div>
           {/* Tabs */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5 }}
             className="flex gap-4 relative z-20 w-80 mt-20 lg:mt-20
            px-4 py-3 bg-white rounded-t-md lg:w-96 md:w-96 md:text-lg"
           >
@@ -87,7 +102,7 @@ const HeroSection = () => {
             >
               <FaTag /> Sell
             </button>
-          </div>
+          </motion.div>
           {!selectedOption && (
             <p className="bg-white md:text-lg font-bold p-2 w-80 md:w-96">
               Select any of the option you want
@@ -96,7 +111,10 @@ const HeroSection = () => {
 
           {/* Form */}
           {selectedOption && (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
               className="bg-white rounded-md shadow-md grid md:text-2xl lg:text-lg lg:flex
                lg:gap-7 gap-3 py-10 px-6"
             >
@@ -166,7 +184,7 @@ const HeroSection = () => {
                   <FaSearch /> Search
                 </button>
               </div>
-            </div>
+            </motion.div>
           )}
         </div>
       </div>
