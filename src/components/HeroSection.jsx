@@ -2,10 +2,12 @@ import { FaHome, FaPlay, FaSearch, FaTag } from "react-icons/fa";
 import heroBg from "../assets/images/estate-bg.png";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import useScrollToSection from "./useScrollToSection";
 
 const HeroSection = () => {
   const [option, setOption] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
+  const scrollTo = useScrollToSection();
 
   return (
     <div
@@ -38,12 +40,15 @@ const HeroSection = () => {
         </motion.p>
 
         <div className="flex flex-wrap items-center gap-4">
-          <a href="#properties" className="bg-[#0F2A44] hover:bg-[#1774cc] md:text-sm text-white py-2 px-3 rounded">
+          <button
+            onClick={() => scrollTo("properties")}
+            className="bg-[#0F2A44] hover:bg-[#1774cc] md:text-sm text-white py-2 px-3 rounded"
+          >
             Explore Properties
-          </a>
+          </button>
 
-          <a
-            href="#about-us"
+          <button
+            onClick={() => scrollTo("about-us")}
             className="flex items-center md:text-sm gap-2 border-2
            text-white py-2 px-4 rounded hover:bg-[#415d73]"
           >
@@ -51,7 +56,7 @@ const HeroSection = () => {
               <FaPlay />
             </span>
             Watch Videos
-          </a>
+          </button>
         </div>
 
         {/* Tabs + Form */}

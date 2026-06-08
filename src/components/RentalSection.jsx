@@ -2,8 +2,10 @@ import React from "react";
 import rentalImg from "../assets/images/Bedroom 4.jpg";
 import { FaKey, FaSearch } from "react-icons/fa";
 import { FaEnvelopeCircleCheck } from "react-icons/fa6";
+import useScrollToSection from "./useScrollToSection";
 
 const RentalSection = () => {
+  const scrollTo = useScrollToSection();
   return (
     <section id="rent" className="my-20 mx-6 md:mx-10">
       <div className="grid lg:flex">
@@ -49,13 +51,13 @@ const RentalSection = () => {
                   </span>
                 </p>
               </div>
-              <a
-                href="#properties"
+              <button
+                onClick={() => scrollTo("properties")}
                 className="bg-[#0a2e4f] font-body hover:bg-[#1774cc]
-            transition duration-300 font-bold w-56 py-1 px-2 text-white rounded-md my-4 text-center block"
+            transition duration-300 font-bold w-56 py-1 px-2 text-white rounded-md my-4"
               >
                 Search Rentals
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -96,13 +98,13 @@ const RentalSection = () => {
               </span>
             </p>
           </div>
-          <a
-            href="#properties"
+          <button
+            onClick={() => scrollTo("properties")}
             className="bg-[#0a2e4f] font-body hover:bg-[#1774cc]
-            transition duration-300 font-bold w-56 py-1 px-2 text-white rounded-md my-4 text-center block"
+            transition duration-300 font-bold w-56 py-1 px-2 text-white rounded-md my-4"
           >
             Search Rentals
-          </a>
+          </button>
         </div>
       </div>
     </section>

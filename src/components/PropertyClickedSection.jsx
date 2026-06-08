@@ -30,10 +30,12 @@ import {
 import { useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { allProperties } from "../../project data/data";
+import useScrollToSection from "./useScrollToSection";
 
 const PropertyClickedSection = () => {
   const navigate = useNavigate();
   const { id } = useParams();
+  const scrollTo = useScrollToSection();
 
   const property = useMemo(() => {
     const numericId = Number(id);
@@ -147,9 +149,12 @@ const PropertyClickedSection = () => {
             </h2>
             <p>Want to this property?</p>
             <p>Let's schedule a time.</p>
-            <a href="#schedule" className="gap-2 bg-[#0F2A44] rounded-sm my-5 w-full mx-auto text-center text-white py-1 px-2 hover:bg-[#4594dd] transition duration-300 block">
+            <button
+              onClick={() => scrollTo("schedule")}
+              className="gap-2 bg-[#0F2A44] rounded-sm my-5 w-full mx-auto text-white py-1 px-2 hover:bg-[#4594dd] transition duration-300"
+            >
               Schedule a Tour
-            </a>
+            </button>
             <p>
               or call <span className="text-[#4594dd]">08100655023</span>
             </p>

@@ -1,8 +1,10 @@
 import { FaKey, FaSearch } from "react-icons/fa";
 import { FaEnvelopeCircleCheck } from "react-icons/fa6";
 import buyImg from "../assets/images/Bedroom 1.jpg";
+import useScrollToSection from "./useScrollToSection";
 
 const BuySection = () => {
+  const scrollTo = useScrollToSection();
   return (
     <section id="buy" className="my-20 mx-6 md:mx-10">
       <div className="grid lg:flex">
@@ -48,13 +50,13 @@ const BuySection = () => {
                   </span>
                 </p>
               </div>
-              <a
-                href="#properties"
+              <button
+                onClick={() => scrollTo("properties")}
                 className="bg-[#0a2e4f] font-body hover:bg-[#1774cc]
-        transition duration-300 font-bold w-56 py-1 px-2 text-white rounded-md my-4 text-center block"
+        transition duration-300 font-bold w-56 py-1 px-2 text-white rounded-md my-4"
               >
                 Start your Search
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -95,13 +97,13 @@ const BuySection = () => {
               </span>
             </p>
           </div>
-          <a
-            href="#properties"
+          <button
+            onClick={() => scrollTo("properties")}
             className="bg-[#0a2e4f] font-body hover:bg-[#1774cc]
-        transition duration-300 font-bold w-56 py-1 px-2 text-white rounded-md my-4 text-center block"
+        transition duration-300 font-bold w-56 py-1 px-2 text-white rounded-md my-4"
           >
             Start your Search
-          </a>
+          </button>
         </div>
       </div>
     </section>

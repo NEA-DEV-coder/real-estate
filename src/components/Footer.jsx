@@ -1,16 +1,38 @@
 import { FaEnvelope, FaFacebook, FaInstagram, FaPhone, FaTwitter } from "react-icons/fa";
 import { FaLocationPin } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import useScrollToSection from "./useScrollToSection";
 
 const Footer = () => {
   const navigate = useNavigate();
+  const scrollTo = useScrollToSection();
+
+  const quickLinks = [
+    { label: "Home", id: "home" },
+    { label: "Properties", id: "properties" },
+    { label: "Buy", id: "buy" },
+    { label: "Sell", id: "sell" },
+    { label: "Rent", id: "rent" },
+    { label: "About Us", id: "about-us" },
+    { label: "Contact", id: "contact" },
+  ];
+
+  const services = [
+    { label: "Buy a Home", id: "buy" },
+    { label: "Sell Your Home", id: "sell" },
+    { label: "Find a Rental", id: "rent" },
+    { label: "Schedule Consultation", id: "schedule" },
+  ];
+
   return (
     <footer className="bg-[#0a2e4f] text-white font-heading mt-20">
       <div className="mx-6 md:mx-10 py-12 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold mb-1">Neadev</h2>
-          <span className="text-sm text-gray-300 font-body">Real Estate</span>
+          <button onClick={() => scrollTo("home")} className="text-left">
+            <h2 className="text-2xl font-bold mb-1">Neadev</h2>
+            <span className="text-sm text-gray-300 font-body">Real Estate</span>
+          </button>
           <p className="text-gray-400 text-sm mt-4 font-body leading-6">
             Helping you find your perfect home with expertise, integrity, and care.
           </p>
@@ -25,17 +47,11 @@ const Footer = () => {
         <div>
           <h3 className="font-bold text-lg mb-4">Quick Links</h3>
           <ul className="space-y-2 text-gray-400 text-sm font-body">
-            {[
-              { label: "Home", href: "#home" },
-              { label: "Properties", href: "#properties" },
-              { label: "Buy", href: "#buy" },
-              { label: "Sell", href: "#sell" },
-              { label: "Rent", href: "#rent" },
-              { label: "About Us", href: "#about-us" },
-              { label: "Contact", href: "#contact" },
-            ].map(({ label, href }) => (
-              <li key={label}>
-                <a href={href} className="hover:text-white transition">{label}</a>
+            {quickLinks.map(({ label, id }) => (
+              <li key={id}>
+                <button onClick={() => scrollTo(id)} className="hover:text-white transition">
+                  {label}
+                </button>
               </li>
             ))}
           </ul>
@@ -45,12 +61,15 @@ const Footer = () => {
         <div>
           <h3 className="font-bold text-lg mb-4">Services</h3>
           <ul className="space-y-2 text-gray-400 text-sm font-body">
-            <li><a href="#buy" className="hover:text-white transition">Buy a Home</a></li>
-            <li><a href="#sell" className="hover:text-white transition">Sell Your Home</a></li>
-            <li><a href="#rent" className="hover:text-white transition">Find a Rental</a></li>
-            <li><a href="#schedule" className="hover:text-white transition">Schedule Consultation</a></li>
+            {services.map(({ label, id }) => (
+              <li key={id}>
+                <button onClick={() => scrollTo(id)} className="hover:text-white transition">
+                  {label}
+                </button>
+              </li>
+            ))}
             <li>
-              <button onClick={() => navigate("/properties")} className="hover:text-white transition text-gray-400 text-sm">
+              <button onClick={() => navigate("/properties")} className="hover:text-white transition">
                 View All Properties
               </button>
             </li>
